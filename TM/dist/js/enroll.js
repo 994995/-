@@ -1,0 +1,1 @@
+"use strict";$("button").click(function(){$.ajax({type:"post",url:"../php/enroll.php",data:{user:$(".user").val(),pass:$(".pass").val()},success:function(s){1==s.code?location.href="../pages/login.html":alert(s.msg)},error:function(){console.log(212121)},dataType:"json"})});

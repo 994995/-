@@ -1,0 +1,1 @@
+"use strict";$(".btn").click(function(){$(".error").css("display","none"),$.ajax({type:"post",url:"../php/login.php",data:{user:$(".user").val(),pass:$(".pass").val()},dataType:"json",success:function(s){1==s.code?(localStorage.setItem("user",s.user),location.href="../pages/index.html"):$(".error").css("display","block")}})});
